@@ -40,7 +40,7 @@ export default function Hero() {
 
 function HeroCircle() {
   return (
-    <div className="md:px-8 lg:px-16 hidden md:block">
+    <div className="md:px-8 lg:px-16">
       <div className="mt-16 mb-16 lg:mb-0 w-80 aspect-square relative border-2 border-blue-700 rounded-full">
         <div className="w-44 aspect-square absolute -top-8 -left-20  border-2 border-blue-700 rounded-full cursor-pointer circle-group">
           {/* image-round-2 */}
