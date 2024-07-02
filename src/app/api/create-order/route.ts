@@ -9,7 +9,7 @@ export async function POST(req: Request, res: Response) {
       "https://www.wellgrow.live/api/lead/create-order",
       data
     );
-
+    console.log("inside server response", response);
     // // Simplify the response to avoid circular structure
     const simplifiedResponse = {
       data: response.data,
@@ -17,9 +17,10 @@ export async function POST(req: Request, res: Response) {
       statusText: response.statusText,
     };
 
+    console.log("simplified response", simplifiedResponse);
     return NextResponse.json(simplifiedResponse);
     // return NextResponse.json("simplifiedResponse");
-  } catch (error) {
+  } catch (error: any) {
     console.error("API error: ", error);
     return new NextResponse("An error occurred", { status: 500 });
   }

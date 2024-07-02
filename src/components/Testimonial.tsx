@@ -41,24 +41,34 @@ function Slider() {
       >
         {/* Slider Container */}
         <div
-          className="grid grid-cols-[repeat(3,100%)] transition-all duration-200"
+          className="grid grid-cols-[repeat(5,100%)] transition-all duration-200"
           ref={container}
           style={{ transform: `translateX(calc(${activeSlide} * -100%))` }}
         >
           <TestimonialCard
-            name="জেনিফার রহমান"
-            des="গোজি ক্রিম সুন্দর একটি উপহার - নিয়মিত ব্যবহারের ফলে দুই সপ্তাহে বলিরেখা হ্রাস পেয়েছে, আমার মুখের বৈশিষ্ট্যগুলি আরও সংজ্ঞায়িত হয়েছে এবং আমার ত্বক আরও সুন্দর হয়েছে, ফলাফল পাওয়ার পরে আমি সবাইকে এটি ব্যবহার করার জন্য  পরামর্শ দিচ্ছি ."
-            img="/ava1.jpg"
-          />
-          <TestimonialCard
-            name="প্রীতি চৌধুরী"
-            des="গোজি ক্রিম একেবারে দারুণ একটি ক্রিম  - মাত্র দুই সপ্তাহের নিয়মিত ব্যবহারে ফলে বলিরেখা স্পষ্টভাবে কমে গেছে, মুখের গঠন আরও স্পষ্ট হয়েছে এবং ত্বক হয়েছে আরও মসৃণ ও টানটান। এমন চমৎকার ফলাফল দেখে আমি সবাইকে এই ক্রিম ব্যবহার করার পরামর্শ দিচ্ছি।"
-            img="/ava2.jpg"
-          />
-          <TestimonialCard
             name="সাবরিনা আলম"
-            des="গোজি ক্রিম ব্যবহার করার পরে আমার ত্বক উজ্জ্বল এবং সুন্দর হয়েছ। এই ক্রিম আমার সকল দুশ্চিন্তা দূর করেছে এবং আমাকে আকর্ষণীয় করেছ। আমি সবাই কে এই ক্রিম ব্যবহার করতে পরামর্শ দেই কারণ এটি ব্যাবহারে কোনো ক্ষতি নেই শুধু উপকার।"
-            img="/ava3.jpg"
+            des="গোজি ক্রিম ব্যবহারে দুই সপ্তাহেই আমার ত্বক টানটান হয়েছে এবং বলিরেখা কমে গেছে। মুখের গঠনও স্পষ্ট হয়েছে। অসাধারণ ফলাফল!"
+            img="/review-1.png"
+          />
+          <TestimonialCard
+            name="এলিনা খান"
+            des="প্রতিদিন গোজি ক্রিম ব্যবহারে ত্বকের বলিরেখা দুই সপ্তাহেই কমেছে। ত্বক মসৃণ ও মুখের গঠন সুন্দরভাবে প্রকাশ পাচ্ছে।"
+            img="/review-2.png"
+          />
+          <TestimonialCard
+            name="আফসানা শারমিন"
+            des="গোজি ক্রিম দুই সপ্তাহেই আমার ত্বকের বলিরেখা কমিয়ে ত্বক টানটান ও মসৃণ করেছে। ফলাফল দেখে আমি সন্তুষ্ট।"
+            img="/review-3.png"
+          />
+          <TestimonialCard
+            name="তন্দ্রা তালুকদার"
+            des="গোজি ক্রিম দুই সপ্তাহের ব্যবহারে ত্বকের বলিরেখা কমিয়ে টানটান ও মসৃণ করেছে। অসাধারণ পণ্য!"
+            img="/review-4.png"
+          />
+          <TestimonialCard
+            name="রুবি হাসান"
+            des="গোজি ক্রিম ব্যবহারের দুই সপ্তাহের মধ্যে ত্বকের বলিরেখা কমে মুখের গঠন স্পষ্ট হয়েছে। আমি খুবই খুশি।"
+            img="/review-5.png"
           />
         </div>
       </div>
@@ -83,6 +93,18 @@ function Slider() {
           } border border-sky-500 rounded-full`}
           onClick={handleClick(2)}
         ></button>
+        <button
+          className={`h-6 aspect-square ${
+            activeSlide === 3 ? "bg-blue-700" : "bg-white hover:bg-blue-500"
+          } border border-sky-500 rounded-full`}
+          onClick={handleClick(3)}
+        ></button>
+        <button
+          className={`h-6 aspect-square ${
+            activeSlide === 4 ? "bg-blue-700" : "bg-white hover:bg-blue-500"
+          } border border-sky-500 rounded-full`}
+          onClick={handleClick(4)}
+        ></button>
       </div>
     </>
   );
@@ -93,7 +115,7 @@ function TestimonialCard(props: { name: string; des: string; img: string }) {
     <div className="w-full p-4 sm:p-8 flex flex-col-reverse md:flex-row items-center gap-8 bg-white text-black rounded-3xl">
       <div className="flex-none h-32 aspect-square rounded-full overflow-hidden">
         <img
-          className="w-full h-full object-cover"
+          className="w-full h-full object-scale-down"
           src={props.img}
           alt={props.name}
         />

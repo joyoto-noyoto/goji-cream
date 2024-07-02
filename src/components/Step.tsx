@@ -26,17 +26,17 @@ export default function Step() {
             <StepCard
               name="প্রথম ধাপ:"
               des="আপনার ত্বক গভীরভাবে পরিষ্কার করে নিতে হবে।"
-              img="/steps_img1.jpg"
+              img="/step-1.jpg"
             />
             <StepCard
               name="দ্বিতীয় ধাপ:"
               des="সম্পূর্ণ ত্বকে গোজি ক্রিম লাগিয় দিন এবং ত্বকে সম্পূর্ণ মিশা না পর্যন্ত সাবধানে ম্যাসাজ করুন।"
-              img="/steps_img1.jpg"
+              img="/step-2.jpg"
             />
             <StepCard
               name="তৃতীয় ধাপ:"
               des="এই পদক্ষেপগুলি অনুসরন করলে ৩ সপ্তাহ পরে আশ্চর্যজনক ফলাফল পাবেন এবং ভালো ফলাফল পাওয়ার জন্য পুনরায় ব্যবহার করুন।"
-              img="/steps_img1.jpg"
+              img="/step-3.png"
             />
           </div>
         </div>

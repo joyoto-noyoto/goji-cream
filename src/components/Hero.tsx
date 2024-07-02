@@ -43,66 +43,71 @@ function HeroCircle() {
     <div className="md:px-8 lg:px-16 hidden md:block">
       <div className="mt-16 mb-16 lg:mb-0 w-80 aspect-square relative border-2 border-blue-700 rounded-full">
         <div className="w-44 aspect-square absolute -top-8 -left-20  border-2 border-blue-700 rounded-full cursor-pointer circle-group">
+          {/* image-round-2 */}
           <img
-            className="w-full h-full object-cover rounded-full"
-            src="/problem-img1aft.jpg"
+            className="w-full h-full object-right rounded-full"
+            src="/b1.jpg"
             alt=""
           />
           <img
-            className="w-full h-full object-cover rounded-full"
-            src="/action_img_aft1.jpg"
+            className="w-full h-full object-right rounded-full"
+            src="/a1.jpg"
             alt=""
           />
         </div>
         <div className="w-36 aspect-square absolute bottom-2 -left-16 border-2 border-blue-700 rounded-full cursor-pointer circle-group">
+          {/* image-round-3 */}
           <img
-            className="w-full h-full object-cover rounded-full"
-            src="/problem-img1aft.jpg"
+            className="w-full h-full object-fill rounded-full"
+            src="/b5.jpg"
             alt=""
           />
           <img
-            className="w-full h-full object-cover rounded-full"
-            src="/action_img_aft1.jpg"
+            className="w-full h-full object-fill rounded-full"
+            src="/a5.jpg"
             alt=""
           />
         </div>
 
         {/*  */}
         <div className="w-28 aspect-square absolute -bottom-16 left-1/2 -translate-x-1/2 border-2 border-blue-700 rounded-full cursor-pointer circle-group">
+          {/* image-round-4 */}
           <img
             className="w-full h-full object-cover rounded-full"
-            src="/problem-img1aft.jpg"
+            src="/b4.jpg"
             alt=""
           />
           <img
             className="w-full h-full object-cover rounded-full"
-            src="/action_img_aft1.jpg"
+            src="/a4.jpg"
             alt=""
           />
         </div>
         <div className="w-20 aspect-square absolute bottom-4 -right-2 border-2 border-blue-700 rounded-full cursor-pointer circle-group">
+          {/* image-round-5 */}
           <img
-            className="w-full h-full object-cover rounded-full"
-            src="/problem-img1aft.jpg"
+            className="w-full h-full object-fill rounded-full"
+            src="/b3.jpg"
             alt=""
           />
           <img
-            className="w-full h-full object-cover rounded-full"
-            src="/action_img_aft1.jpg"
+            className="w-full h-full object-fill rounded-full"
+            src="/a3.jpg"
             alt=""
           />
         </div>
 
         {/*  */}
         <div className="w-32 aspect-square absolute -top-14 right-10 border-2 border-blue-700 rounded-full cursor-pointer circle-group">
+          {/* image-round-1 */}
           <img
             className="w-full h-full object-cover rounded-full"
-            src="/problem-img1aft.jpg"
+            src="/b2.jpg"
             alt=""
           />
           <img
             className="w-full h-full object-cover rounded-full"
-            src="/action_img_aft1.jpg"
+            src="/a2.jpg"
             alt=""
           />
         </div>

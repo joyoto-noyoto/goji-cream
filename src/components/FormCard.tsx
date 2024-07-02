@@ -117,6 +117,14 @@ function Input(props: IInputProps) {
   );
 }
 
+function validatePhone(phone: any) {
+  // Regular expression for Bangladeshi phone numbers (11 digits, starting with 013-019)
+  const regex = /^01[3-9]\d{9}$/;
+
+  // Check if the phone number matches the regex
+  return regex.test(phone);
+}
+
 function FormMain() {
   const router = useRouter();
   const [orderData, setOrderData] = useState({
@@ -128,15 +136,23 @@ function FormMain() {
     order_id: "2025",
   });
 
+  const [error, setError] = useState("");
+
   const handleOrder = async (e: any) => {
     e.preventDefault();
     console.log("order data", orderData);
-    // const order_id = generateRandom8DigitNumber();
+
+    if (!validatePhone(orderData.phone)) {
+      setError("Please enter valid number");
+      return;
+    }
+
     try {
       const response = await axios.post("/api/create-order", {
         ...orderData,
       });
 
+      console.log("order response", response);
       if (response.status === 200) {
         // Clear the form data
         setOrderData({
@@ -156,6 +172,12 @@ function FormMain() {
       console.log("Order error fix", error);
     }
   };
+
+  const validatePhone = (phone: string) => {
+    const regex = /^(013|014|015|016|017|018|019)\d{8}$/;
+    return regex.test(phone);
+  };
+
   const handleChange = (e: any) => {
     e.preventDefault();
     const { name, value } = e.target;
@@ -164,6 +186,58 @@ function FormMain() {
       [name]: value,
     }));
   };
+
+  // const handleOrder = async (e: any) => {
+  //   e.preventDefault();
+  //   console.log("order data", orderData);
+  //   // const order_id = generateRandom8DigitNumber();
+  //   try {
+  //     const response = await axios.post("/api/create-order", {
+  //       ...orderData,
+  //     });
+
+  //     console.log("order response", response);
+  //     if (response.status === 200) {
+  //       // Clear the form data
+  //       setOrderData({
+  //         phone: "",
+  //         name: "",
+  //         api_key: "e1f945820efbf2ac25ed08f29c48c3f4",
+  //         goods_id: "154",
+  //         user_id: "Null",
+  //         order_id: "2025",
+  //       });
+  //       // Redirect to thankfull page
+  //       router.push("/thankfull");
+  //     } else {
+  //       console.log("Order failed: ", response.statusText);
+  //     }
+  //   } catch (error) {
+  //     console.log("Order error fix", error);
+  //   }
+  // };
+
+  // const handleChange = (e: any) => {
+  //   e.preventDefault();
+  //   const { name, value } = e.target;
+
+  //   // Validate phone number on change if it's the phone field
+  //   if (name === "phone") {
+  //     const isValid = validatePhone(value);
+  //     setOrderData((prevData) => ({
+  //       ...prevData,
+  //       [name]: value,
+  //       phoneError: isValid
+  //         ? ""
+  //         : "Invalid phone number. Must be 11 digits starting with 013-019.",
+  //     }));
+  //   } else {
+  //     setOrderData((prevData) => ({
+  //       ...prevData,
+  //       [name]: value,
+  //     }));
+  //   }
+  // };
   return (
     <div className="mb-8 max-w-sm w-full mx-auto bg-white rounded-3xl">
       {/* Form Heading */}
@@ -203,6 +277,7 @@ function FormMain() {
           placeholder="ফোন নম্বর"
           className="h-10 px-2 sm:px-4 text-sm sm:text-sm bg-transparent outline-none border border-sky-500 rounded-3xl"
         />
+        {error && <div className="text-red-500 text-sm font-bold">{error}</div>}
         <button
           type="submit"
           className="w-full h-10 sm:px-4 font-bold text-xs bg-gradient-to-b from-yellow-300 to-yellow-500 hover:from-yellow-400 hover:to-yellow-600 transition-all rounded-3xl shadow-lg"
