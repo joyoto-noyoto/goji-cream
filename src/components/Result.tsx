@@ -8,7 +8,7 @@ export default function Result() {
           {/* Heading */}
           <div className="py-8 w-full lg:w-max">
             <h2 className="mb-2 text-center font-bold text-4xl text-blue-700">
-              গোজি ক্রিম
+              Wellness Goji Cream
             </h2>
             <p className="pr-4 text-center lg:text-right font-bold text-sm text-black">
               সুন্দর ও নিখুঁত ত্বকের ক্রিম
@@ -74,7 +74,7 @@ function LeftSubColTwo() {
       <div className="max-w-[25rem] w-full h-full">
         <img
           className="w-full h-full object-contain"
-          src="/goji.gif"
+          src="/goji_footer.png"
           alt="goji"
         />
       </div>

@@ -9,7 +9,7 @@ export default function Hero() {
           {/* Heading */}
           <div className="w-max mx-auto">
             <h2 className="mb-2 font-bold text-4xl text-blue-700">
-              গোজি ক্রিম
+              Wellness Goji Cream
             </h2>
             <p className="pr-4 text-right font-bold text-sm text-black">
               সুন্দর ও নিখুঁত ত্বকের ক্রিম
@@ -31,7 +31,9 @@ export default function Hero() {
             />
           </div>
 
-          <FormCard timer />
+          <div className="hidden md:block">
+            <FormCard timer />
+          </div>
         </div>
       </div>
     </section>
@@ -116,7 +118,7 @@ function HeroCircle() {
         <div className="h-64 w-48 absolute -top-4 -right-32">
           <img
             className="w-full h-full object-cover rounded-full"
-            src="/goji.gif"
+            src="/goji.png"
             alt=""
           />
         </div>
