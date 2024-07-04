@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Goji Cream 2 Landing Page",
+  title: "Goji Cream",
   description: "",
-  authors: [{ name:"mdmahikaishar",url: "mahikaishar@gmail.com" }]
 };
 
 export default function RootLayout({
